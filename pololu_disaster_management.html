@@ -27,6 +27,11 @@
         nav a:hover {
             text-decoration: underline;
         }
+        h1 {
+            color: #00adb5; 
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
         .container {
             padding: 2rem;
         }
@@ -36,6 +41,20 @@
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+        .image-placeholder {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin: 0.5rem 0;
+        }
+        .image-placeholder img {
+            width: 60%; 
+            max-width: 600px; 
+            height: auto; 
+            border-radius: 5px; 
+            border: 2px solid white;
+            transform: rotate(-90deg); 
         }
     </style>
 </head>
@@ -49,9 +68,49 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h1>Project Title</h1>
-        <p>Provide detailed information about the specific project here.</p>
-        <p>Include descriptions, images, technical details, and any other relevant content.</p>
+        <h1>Pololu 3pi+ Robot Disaster Management Simulation</h1>
+        <p>
+            In this project, I’ve programmed the Pololu 3pi+ robot using the Arduino IDE to simulate a disaster management scenario. The robot’s mission is to locate magnets, which represent injured individuals, and follow a predefined workflow to indicate their positions.
+        </p>
+        <h2>Key Tasks</h2>
+        <ul>
+            <li><strong>Task 1:</strong> The robot starts from its home position and navigates to the search zone on the right side of the map. It searches for a magnet in this area.</li>
+            <li><strong>Task 2:</strong> Once the robot detects a magnet at a random location (simulated by a dice roll), it returns to its home position. It then alerts the user and navigates back to the magnet’s location.</li>
+            <li><strong>Task 3:</strong> This task repeats Task 2 to ensure consistency and repeatability.</li>
+        </ul>
+        <p>
+            The robot’s primary objective is to locate injured individuals (magnets) in disaster zones and promptly return to alert rescue teams. Additionally, it marks the location of each magnet for further action.
+        </p>
+        <h2>Hardware:</h2>
+        <ul>
+            <li>Pololu 3pi+ robot.</li>
+            <li>Magnet to simulate injured individuals.</li>
+            <li>Batteries and a pre-defined map for navigation.</li>
+        </ul>
+        <h2>Software:</h2>
+        <ul>
+            <li><strong>Arduino IDE:</strong> The Pololu 3pi+ controller is based on Arduino Leonardo.</li>
+            <li><strong>Core Scripts:</strong>
+                <ul>
+                    <li><strong>pid.h:</strong> Implements smooth control using a PID algorithm for precise navigation.</li>
+                    <li><strong>magnetometer.h:</strong> Initializes the magnetometer to detect magnetic fields in the search zone.</li>
+                    <li><strong>kinematics.h:</strong> Localizes the robot’s position and orientation within the map.</li>
+                    <li><strong>motors.h:</strong> Initializes and controls motor speeds to ensure smooth movement.</li>
+                    <li><strong>encoders.h:</strong> Provides a subset of kinematics for accurate localization and distance tracking.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            This project showcases how compact robotic platforms, such as the Pololu 3pi+, can be scaled and utilized in disaster management scenarios to offer precise search, localization, and alerting functionalities. Special thanks to Paul O'Dowd for formulating a scalable application.
+        </p>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://github.com/snknitheesh/pololu3pi" target="_blank">GitHub Code</a></li>
+            <li><a href="https://youtu.be/OT463JCGn8Y?si=wrWv4jhDMjV-BxqB" target="_blank">Video Demonstration</a></li>
+        </ul>
+        <div class="image-placeholder">
+            <img src="pololu.jpg" alt="Project Image">
+        </div>
     </div>
     <footer>
         &copy; 2025 zobots. All rights reserved.

@@ -30,12 +30,53 @@
         .container {
             padding: 2rem;
         }
+        .gif-container, .images-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
         footer {
             background-color: #1f1f1f;
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+        h1 {
+            color: #00adb5; 
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border: 2px solid white;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            margin-left: 1.5rem; 
+            margin-bottom: 1.5rem;
+            line-height: 1.6; 
+        }
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        img {
+            max-width: 30%;
+            height: auto;
+            margin: 1rem 0;
+            border: 2px solid white;
         }
     </style>
 </head>
@@ -49,9 +90,58 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h1>Project Title</h1>
-        <p>Provide detailed information about the specific project here.</p>
-        <p>Include descriptions, images, technical details, and any other relevant content.</p>
+        <h1>Exploring Vision with NVIDIA Jetson Orin Nano & Intel RealSense D457</h1>
+        <p>
+            I recently worked on a project where I combined the <strong>NVIDIA Jetson Orin Nano</strong> and the <strong>Intel Corporation RealSense D457</strong> depth camera to develop a machine vision application. This setup allowed me to perform basic object detection, motion tracking, and utilize point cloud data, unlocking huge possibilities for real-world applications!
+        </p>
+        <p>
+            This project emphasizes the importance of depth perception and real-time analysis in machine vision. With the Jetson Orin Nano’s incredible processing power and the depth camera’s spatial data, I explored how these technologies can bridge the gap between perception and action.
+        </p>
+        <div>
+            <h2>Hardware:</h2>
+            <h4>Intel RealSense D457 Depth Camera</h4>
+            <ul>
+                <li><strong>Resolution:</strong> Up to 1280x720 pixels.</li>
+                <li><strong>Frame Rate:</strong> Up to 90 frames per second.</li>
+                <li><strong>Depth Range:</strong> 0.2 to 20 meters.</li>
+                <li><strong>Field of View:</strong> Wide field of view for enhanced depth perception.</li>
+                <li><strong>Connectivity:</strong> USB 3.1 Gen 1 for fast data transfer.</li>
+            </ul>
+            <h4>NVIDIA Jetson Orin Nano (8GB)</h4>
+            <ul>
+                <li><strong>GPU:</strong> 1024-core NVIDIA Ampere architecture GPU.</li>
+                <li><strong>CPU:</strong> 6-core ARM Cortex-A78AE.</li>
+                <li><strong>Memory:</strong> 8GB LPDDR5.</li>
+                <li><strong>Performance:</strong> Up to 40 TOPS (Tera Operations Per Second).</li>
+                <li><strong>Connectivity:</strong> Gigabit Ethernet, multiple USB ports, and camera interfaces.</li>
+            </ul>
+            <h2>Software:</h2>
+            <ul>
+                <li><strong>NVIDIA SDK:</strong> Tools for accelerated AI computations and seamless deployment.</li>
+                <li><strong>RealSense SDK:</strong> Software for processing depth data and integrating point clouds.</li>
+                <li><strong>Ubuntu:</strong> Operating system used for development and deployment.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Implemented Projects</h2>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Object detection using a trained model</li>
+                <li>Motion detection</li>
+                <li>Point cloud viewing</li>
+                <li>Depth image acquisition</li>
+            </ul>
+        </div>
+        <p><a href="https://github.com/snknitheesh/Intel-Realsense-D457" target="_blank">Source Code</a></p>
+        <div class="images-container">
+            <img src="jetson.jpg" alt="NVIDIA Jetson Orin Nano">
+            <img src="realsense.png" alt="Intel RealSense D457">
+        </div>
+        
+        <div class="gif-container">
+            <h2>Project Output</h2>
+            <img src="realsense.gif" alt="Project Output GIF" style="max-width: 100%; height: auto; border: 2px solid white;">
+        </div>
+        
     </div>
     <footer>
         &copy; 2025 zobots. All rights reserved.

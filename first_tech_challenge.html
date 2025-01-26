@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Detail</title>
+    <title>FTC Rover Ruckus Challenge</title>
     <style>
         body {
             background-color: #121212;
@@ -19,6 +19,11 @@
             display: flex;
             justify-content: space-around;
         }
+        h1 {
+            color: #00adb5; 
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
         nav a {
             color: white;
             text-decoration: none;
@@ -29,6 +34,17 @@
         }
         .container {
             padding: 2rem;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .images img {
+            width: 40%;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
         }
         footer {
             background-color: #1f1f1f;
@@ -49,10 +65,39 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h1>Project Title</h1>
-        <p>Provide detailed information about the specific project here.</p>
-        <p>Include descriptions, images, technical details, and any other relevant content.</p>
+        <h1>FTC Rover Ruckus Challenge</h1>
+        <div class="timeline">
+            <p><strong>Jan 2019 - Jul 2019</strong></p>
+            <p>This project was accomplished during my undergraduate at PSG College of Technology.</p>
+        </div>
+        <div class="content-section">
+            <p>In the <strong>FTC Rover Ruckus Challenge</strong>, I was part of a robotics team that designed, programmed, and operated a robot to compete in a fast-paced, multi-phase robotics competition. The challenge included the <strong>Autonomous Period</strong>, <strong>Driver-Controlled Period</strong>, and <strong>Endgame</strong>, requiring innovative engineering and strategic gameplay.</p>
+        </div>
+        <div class="content-section">
+            <h2>Key Phases of the Competition</h2>
+            <h3>Autonomous Period</h3>
+            <p>Our robot successfully performed tasks such as landing, identifying and knocking over the gold mineral, placing a team marker in the depot, and parking on the crater, achieving the maximum possible points.</p>
+
+            <h3>Driver-Controlled Period</h3>
+            <p>We excelled in collecting and sorting minerals, ensuring the gold and silver minerals were deposited in their respective locations. Our efficient and precise robot design allowed us to outperform the competition.</p>
+
+            <h3>Endgame</h3>
+            <p>We showcased our robot's advanced capabilities by latching back onto the lander and parking inside the crater, maximizing our score in the final seconds of the match.</p>
+        </div>
+        <div class="content-section">
+            <h2>Technical Details</h2>
+            <p>We utilized a <strong>BeagleBone</strong> as the main hardware platform and developed the control logic using <strong>Python</strong>. For wireless communication, we implemented a <strong>ZigBee</strong> module, enabling seamless control and coordination during the competition.</p>
+        </div>
+        
+
+        <p>This project honed my skills in programming, mechanical design, teamwork, and strategic thinking, further solidifying my passion for robotics and innovation.</p>
+        <li><a href="https://www.youtube.com/watch?v=rR4gR4l2XA8" target="_blank">Theme Explanation</a></li>
+        <div class="images">
+            <img src="rover1.png" alt="Theme">
+            <img src="rover2.jpg" alt="Robot in Action">
+        </div>
     </div>
+
     <footer>
         &copy; 2025 zobots. All rights reserved.
     </footer>
