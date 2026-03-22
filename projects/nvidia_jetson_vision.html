@@ -3,148 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Detail</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #1f1f1f;
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-around;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            padding: 2rem;
-        }
-        .gif-container, .images-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        footer {
-            background-color: #1f1f1f;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        h1 {
-            color: #00adb5; 
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 1rem 0;
-            border: 2px solid white;
-        }
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        h3 {
-            font-size: 1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        ul {
-            margin-left: 1.5rem; 
-            margin-bottom: 1.5rem;
-            line-height: 1.6; 
-        }
-        .images-container {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        img {
-            max-width: 30%;
-            height: auto;
-            margin: 1rem 0;
-            border: 2px solid white;
-        }
-    </style>
+    <title>NVIDIA Jetson Vision | Nitheesh Kumar S</title>
+    <meta name="description" content="Object detection and motion detection using NVIDIA Jetson Orin Nano and Intel RealSense D457.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/projects.html">Projects</a>
-        <a href="../pages/experience.html">Work Experience</a>
-        <a href="../pages/skills.html">Skills</a>
-        <a href="../pages/blog.html">Blog</a>
-        <a href="../pages/contact.html">Contact</a>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo">NK<span class="accent">S</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../pages/projects.html">Projects</a>
+            <a href="../pages/experience.html">Experience</a>
+            <a href="../pages/education.html">Education</a>
+            <a href="../pages/skills.html">Skills</a>
+            <a href="../pages/blog.html">Blog</a>
+            <a href="../pages/contact.html">Contact</a>
+        </div>
+        <div class="nav-social">
+            <a href="https://linkedin.com/in/zozopie" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/snknitheesh" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="mailto:snknitheesh@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+        </div>
     </nav>
-    <div class="container">
-        <h1>Exploring Vision with NVIDIA Jetson Orin Nano & Intel RealSense D457</h1>
-        <p>
-            I recently worked on a project where I combined the <strong>NVIDIA Jetson Orin Nano</strong> and the <strong>Intel Corporation RealSense D457</strong> depth camera to develop a machine vision application. This setup allowed me to perform basic object detection, motion tracking, and utilize point cloud data, unlocking huge possibilities for real-world applications!
-        </p>
-        <p>
-            This project emphasizes the importance of depth perception and real-time analysis in machine vision. With the Jetson Orin Nano’s incredible processing power and the depth camera’s spatial data, I explored how these technologies can bridge the gap between perception and action.
-        </p>
-        <div>
-            <h2>Hardware:</h2>
-            <h4>Intel RealSense D457 Depth Camera</h4>
+
+    <main class="project-detail">
+        <a href="../pages/projects.html" class="back-link" data-animate>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Projects
+        </a>
+
+        <h1 data-animate>Exploring Vision with NVIDIA Jetson Orin Nano &amp; Intel RealSense D457</h1>
+        <p class="project-meta" data-animate>Machine Vision &middot; Depth Sensing &middot; Real-time Processing</p>
+
+        <div class="project-detail-section glass-card" data-animate>
+            <p>I recently worked on a project where I combined the NVIDIA Jetson Orin Nano and the Intel Corporation RealSense D457 depth camera to develop a machine vision application. This setup allowed me to perform basic object detection, motion tracking, and utilize point cloud data, unlocking huge possibilities for real-world applications.</p>
+            <p>This project emphasizes the importance of depth perception and real-time analysis in machine vision. With the Jetson Orin Nano's incredible processing power and the depth camera's spatial data, I explored how these technologies can bridge the gap between perception and action.</p>
+        </div>
+
+        <div class="project-detail-section glass-card" data-animate>
+            <h2>Hardware</h2>
+            <h3>Intel RealSense D457 Depth Camera</h3>
             <ul>
-                <li><strong>Resolution:</strong> Up to 1280x720 pixels.</li>
-                <li><strong>Frame Rate:</strong> Up to 90 frames per second.</li>
-                <li><strong>Depth Range:</strong> 0.2 to 20 meters.</li>
-                <li><strong>Field of View:</strong> Wide field of view for enhanced depth perception.</li>
-                <li><strong>Connectivity:</strong> USB 3.1 Gen 1 for fast data transfer.</li>
+                <li><strong>Resolution:</strong> Up to 1280x720 pixels</li>
+                <li><strong>Frame Rate:</strong> Up to 90 frames per second</li>
+                <li><strong>Depth Range:</strong> 0.2 to 20 meters</li>
+                <li><strong>Field of View:</strong> Wide field of view for enhanced depth perception</li>
+                <li><strong>Connectivity:</strong> USB 3.1 Gen 1 for fast data transfer</li>
             </ul>
-            <h4>NVIDIA Jetson Orin Nano (8GB)</h4>
+            <h3>NVIDIA Jetson Orin Nano (8GB)</h3>
             <ul>
-                <li><strong>GPU:</strong> 1024-core NVIDIA Ampere architecture GPU.</li>
-                <li><strong>CPU:</strong> 6-core ARM Cortex-A78AE.</li>
-                <li><strong>Memory:</strong> 8GB LPDDR5.</li>
-                <li><strong>Performance:</strong> Up to 40 TOPS (Tera Operations Per Second).</li>
-                <li><strong>Connectivity:</strong> Gigabit Ethernet, multiple USB ports, and camera interfaces.</li>
-            </ul>
-            <h2>Software:</h2>
-            <ul>
-                <li><strong>NVIDIA SDK:</strong> Tools for accelerated AI computations and seamless deployment.</li>
-                <li><strong>RealSense SDK:</strong> Software for processing depth data and integrating point clouds.</li>
-                <li><strong>Ubuntu:</strong> Operating system used for development and deployment.</li>
+                <li><strong>GPU:</strong> 1024-core NVIDIA Ampere architecture GPU</li>
+                <li><strong>CPU:</strong> 6-core ARM Cortex-A78AE</li>
+                <li><strong>Memory:</strong> 8GB LPDDR5</li>
+                <li><strong>Performance:</strong> Up to 40 TOPS (Tera Operations Per Second)</li>
+                <li><strong>Connectivity:</strong> Gigabit Ethernet, multiple USB ports, and camera interfaces</li>
             </ul>
         </div>
-        <div>
+
+        <div class="project-detail-section glass-card" data-animate>
+            <h2>Software</h2>
+            <ul>
+                <li><strong>NVIDIA SDK:</strong> Tools for accelerated AI computations and seamless deployment</li>
+                <li><strong>RealSense SDK:</strong> Software for processing depth data and integrating point clouds</li>
+                <li><strong>Ubuntu:</strong> Operating system used for development and deployment</li>
+            </ul>
+        </div>
+
+        <div class="project-detail-section glass-card" data-animate>
             <h2>Implemented Projects</h2>
-            <ul style="text-align: left; display: inline-block;">
+            <ul>
                 <li>Object detection using a trained model</li>
                 <li>Motion detection</li>
                 <li>Point cloud viewing</li>
                 <li>Depth image acquisition</li>
             </ul>
         </div>
-        <p><a href="https://github.com/snknitheesh/Intel-Realsense-D457" target="_blank">Source Code</a></p>
-        <div class="images-container">
-            <img src="../images/jetson.jpg" alt="NVIDIA Jetson Orin Nano">
-            <img src="../images/realsense.png" alt="Intel RealSense D457">
+
+        <div class="project-detail-section" data-animate>
+            <div class="two-col-images">
+                <img src="../images/jetson.jpg" alt="NVIDIA Jetson Orin Nano" loading="lazy">
+                <img src="../images/realsense.png" alt="Intel RealSense D457" loading="lazy">
+            </div>
         </div>
-        
-        <div class="gif-container">
+
+        <div class="project-detail-section glass-card" data-animate>
             <h2>Project Output</h2>
-            <img src="../images/realsense.gif" alt="Project Output GIF" style="max-width: 100%; height: auto; border: 2px solid white;">
+            <img src="../images/realsense.gif" alt="Project Output - Object Detection Demo" class="project-image" loading="lazy">
         </div>
-        
-    </div>
-    <footer>
-        &copy; 2025 zobots. All rights reserved.
+
+        <div class="project-links" data-animate>
+            <a href="https://github.com/snknitheesh/Intel-Realsense-D457" target="_blank" class="project-link">
+                <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Source Code
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/zozopie" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/snknitheesh" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="mailto:snknitheesh@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+        </div>
+        <p>&copy; 2026 Nitheesh Kumar Senthilnathan. All rights reserved.</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
